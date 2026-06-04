@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allen Le Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Allen Le, a software engineer building full-stack web applications and practical developer tools."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amazon+Ember:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body id="top">
+    <header class="az-header">
+      <!-- Top navigation bar -->
+      <div class="az-nav-top">
+        <div class="az-nav-top-inner">
+          <a class="az-logo" href="#top" aria-label="allen.le home">
+            <span class="az-logo-text">aln<span class="az-logo-dot">.swe</span></span>
+            <span class="az-logo-smile" aria-hidden="true"></span>
+          </a>
+
+          <a class="az-nav-block az-deliver" href="#about">
+            <span class="az-pin" aria-hidden="true">📍</span>
+            <div>
+              <div class="az-line-1">Deliver to</div>
+              <div class="az-line-2">San Jose 95112</div>
+            </div>
+          </a>
+
+          <form class="az-search" id="az-search" role="search" aria-label="Site search">
+            <select class="az-search-cat" aria-label="Search category">
+              <option value="all">All</option>
+              <option value="projects">Projects</option>
+              <option value="skills">Skills</option>
+              <option value="experience">Experience</option>
+              <option value="education">Education</option>
+              <option value="contact">Contact</option>
+            </select>
+            <input
+              type="search"
+              class="az-search-input"
+              placeholder="Search Allen's portfolio…"
+              aria-label="Search portfolio"
+            />
+            <button type="submit" class="az-search-btn" aria-label="Search">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path
+                  fill="#0F1111"
+                  d="M10 2a8 8 0 105.3 14.04l4.83 4.83 1.41-1.41-4.83-4.83A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"
+                />
+              </svg>
+            </button>
+          </form>
+
+          <a class="az-nav-block az-lang" href="#" onclick="return false;">
+            <span class="az-flag" aria-hidden="true">🇺🇸</span>
+            <strong>EN</strong>
+          </a>
+
+          <a class="az-nav-block az-nav-block-alt" href="#contact">
+            <div class="az-line-1">Hello, recruiter</div>
+            <div class="az-line-2-bold">Credentials &amp; Resume ▾</div>
+          </a>
+
+          <a class="az-nav-block az-nav-block-alt" href="#activity">
+            <div class="az-line-1">Activity</div>
+            <div class="az-line-2-bold">&amp; Projects</div>
+          </a>
+
+          <a class="az-nav-block az-cart" href="#projects" aria-label="Project cart">
+            <span class="az-cart-icon" aria-hidden="true">
+              <span class="az-cart-count" id="az-cart-count">0</span>
+              🛒
+            </span>
+            <strong class="az-cart-text">Cart</strong>
+          </a>
+        </div>
+      </div>
+
+      <!-- Secondary navigation bar -->
+      <div class="az-nav-bottom">
+        <div class="az-nav-bottom-inner">
+          <button class="az-hamburger" id="az-hamburger" aria-label="All menu">
+            <span aria-hidden="true">☰</span> All
+          </button>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#activity">Activity</a>
+          <a href="#education">Education</a>
+          <a href="Le Allen Resume 26.docx" download>Customer Service</a>
+          <a class="az-nav-deal" href="#contact">
+            Now Available · Summer / New Grad 2026
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero banner -->
+      <section class="az-hero">
+        <div class="az-hero-fade"></div>
+        <div class="az-hero-inner">
+          <div class="az-hero-card">
+            <p class="az-eyebrow">Prime Deal of the Day</p>
+            <h1>Software Engineer · Available for hire</h1>
+            <p class="az-hero-copy">
+              Full-stack developer shipping React, Flask, Node.js, and cloud-deployed apps.
+              B.S. Software Engineering, San José State University · May 2026.
+            </p>
+            <div class="az-hero-actions">
+              <a class="az-btn az-btn-yellow" href="#projects">Shop the Projects</a>
+              <a class="az-btn az-btn-grey" href="Le Allen Resume 26.pdf" download>Download Resume</a>
+              <a class="az-btn az-btn-grey" href="#contact">Add to Interview List</a>
+            </div>
+
+          </div>
+          <div class="az-hero-image">
+            <div class="az-hero-flip" id="az-hero-flip" aria-label="Flipping hero image">
+              <div class="az-hero-flip-inner">
+                <div class="az-hero-face az-hero-face-front">
+                  <img src="images/linkedinpic.jpg" alt="Allen Le" class="az-hero-image-img">
+                </div>
+                <div class="az-hero-face az-hero-face-back" aria-hidden="true">
+                  <div class="az-hero-face-back-inner">
+                    <div class="az-hero-face az-hero-face-front">
+                      <img src="images/canvaspic.jpg" alt="Allen Le" class="az-hero-image-img">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category card grid (Amazon homepage 4-up) -->
+      <section class="az-cat-row">
+        <article class="az-cat-card">
+          <h3>Featured Projects</h3>
+          <div class="az-thumbs">
+            <a href="#projects" class="az-thumb az-thumb-har">
+              <span>🏃‍♂️</span>
+              <small>HAR ML</small>
+            </a>
+            <a href="#projects" class="az-thumb az-thumb-yap">
+              <span>💬</span>
+              <small>SpartanYap</small>
+            </a>
+            <a href="#projects" class="az-thumb az-thumb-study">
+              <span>📚</span>
+              <small>StudySync</small>
+            </a>
+            <a href="#projects" class="az-thumb az-thumb-more">
+              <span>＋</span>
+              <small>More</small>
+            </a>
+          </div>
+          <a class="az-cat-link" href="#projects">See all projects</a>
+        </article>
+
+        <article class="az-cat-card">
+          <h3>Shop by Skill</h3>
+          <div class="az-thumbs">
+            <a href="#skills" class="az-thumb az-thumb-lang">
+              <span>☕</span><small>Languages</small>
+            </a>
+            <a href="#skills" class="az-thumb az-thumb-front">
+              <span>⚛️</span><small>Frontend</small>
+            </a>
+            <a href="#skills" class="az-thumb az-thumb-back">
+              <span>🛠️</span><small>Backend</small>
+            </a>
+            <a href="#skills" class="az-thumb az-thumb-cloud">
+              <span>☁️</span><small>Cloud</small>
+            </a>
+          </div>
+          <a class="az-cat-link" href="#skills">See all skills</a>
+        </article>
+
+        <article class="az-cat-card">
+          <h3>Customer Reviews · Activity</h3>
+          <div class="az-preview-list">
+            <div class="az-preview-item" id="preview-github">
+              <div class="az-preview-icon az-preview-icon-gh" aria-hidden="true">🐙</div>
+              <div class="az-preview-body">
+                <span class="az-preview-source">GitHub · Latest</span>
+                <strong class="az-preview-title">Loading latest event…</strong>
+                <span class="az-preview-meta"></span>
+              </div>
+            </div>
+            <div class="az-preview-item" id="preview-leetcode">
+              <div class="az-preview-icon az-preview-icon-lc" aria-hidden="true">🟢</div>
+              <div class="az-preview-body">
+                <span class="az-preview-source">LeetCode · Recent AC</span>
+                <strong class="az-preview-title">Loading latest accepted…</strong>
+                <span class="az-preview-meta"></span>
+              </div>
+            </div>
+          </div>
+          <a class="az-cat-link" href="#activity">View live activity</a>
+        </article>
+
+        <article class="az-cat-card">
+          <h3>Get in touch with the seller</h3>
+          <div class="az-thumbs">
+            <a href="mailto:allenle614@gmail.com" class="az-thumb az-thumb-email">
+              <span>✉️</span><small>Email</small>
+            </a>
+            <a href="https://github.com/le-allen" target="_blank" rel="noreferrer" class="az-thumb az-thumb-gh">
+              <span>🐙</span><small>GitHub</small>
+            </a>
+            <a href="https://linkedin.com/in/aln-le" target="_blank" rel="noreferrer" class="az-thumb az-thumb-in">
+              <span>💼</span><small>LinkedIn</small>
+            </a>
+
+          </div>
+          <a class="az-cat-link" href="#contact">Contact options</a>
+        </article>
+      </section>
+
+      <!-- About strip -->
+      <section class="az-strip" id="about">
+        <div class="az-strip-inner">
+          <h2>About this seller</h2>
+          <p>
+            Hi, I’m Allen — a software engineering graduate from San José State University focused on
+            full-stack development, modern web apps, and practical backend systems. I enjoy
+            building collaborative products and learning by shipping real projects, working with
+            React, Flask, Node.js, and cloud tooling to deliver applications with clean UX,
+            scalable APIs, and maintainable architecture.
+          </p>
+          <ul class="az-strip-badges">
+            <li><span>✓</span> 4+ years coding</li>
+            <li><span>✓</span> Ships in production</li>
+            <li><span>✓</span> Open-source friendly</li>
+            <li><span>✓</span> Team-tested in Agile</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Featured Projects shelf -->
+      <section class="az-shelf" id="projects">
+        <div class="az-shelf-head">
+          <h2>Featured Projects</h2>
+          <a href="#contact">Need something similar? ›</a>
+        </div>
+
+        <div class="az-product-grid">
+          <article class="az-product" data-search="human activity recognition python pandas scikit-learn time-series ml deep learning projects">
+            <a class="az-product-img az-img-har" href="https://github.com/d2blepeace/CS156Project" target="_blank" rel="noreferrer">
+              <span aria-hidden="true">🏃‍♂️</span>
+            </a>
+            <div class="az-product-body">
+              <a class="az-product-title" href="https://github.com/d2blepeace/CS156Project" target="_blank" rel="noreferrer">
+                Human Activity Recognition — Deep Learning Pipeline
+              </a>
+              <div class="az-rating">
+                <span class="az-stars" aria-label="5 out of 5 stars">★★★★★</span>
+                <span class="az-rating-count">142</span>
+              </div>
+              <div class="az-price">
+                <span class="az-price-symbol">stack</span>
+                <span class="az-price-whole">Python</span>
+                <span class="az-price-frac">+ pandas, scikit-learn</span>
+              </div>
+              <p class="az-prime"><strong>open</strong> source · Time-series ML</p>
+              <p class="az-stock">In stock — classifies walking, sitting, standing from sensor data.</p>
+              <a class="az-btn az-btn-yellow az-btn-sm" href="https://github.com/d2blepeace/CS156Project" target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+              <button class="az-btn az-btn-grey az-btn-sm az-add-cart" type="button">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="az-product" data-search="spartanyap real-time react flask postgresql docker jwt social platform board projects">
+            <a class="az-product-img az-img-yap" href="https://github.com/shallowsmith/SpartanYap" target="_blank" rel="noreferrer">
+              <span aria-hidden="true">💬</span>
+            </a>
+            <div class="az-product-body">
+              <a class="az-product-title" href="https://github.com/shallowsmith/SpartanYap" target="_blank" rel="noreferrer">
+                SpartanYap — Real-time Board-style Social Platform
+              </a>
+              <div class="az-rating">
+                <span class="az-stars" aria-label="4.5 out of 5 stars">★★★★½</span>
+                <span class="az-rating-count">98</span>
+              </div>
+              <div class="az-price">
+                <span class="az-price-symbol">stack</span>
+                <span class="az-price-whole">React</span>
+                <span class="az-price-frac">+ Flask, PostgreSQL, Docker</span>
+              </div>
+              <p class="az-prime"><strong>JWT</strong> auth · Dockerized</p>
+              <p class="az-stock">In stock — secure auth, REST APIs, Postgres persistence.</p>
+              <a class="az-btn az-btn-yellow az-btn-sm" href="https://github.com/shallowsmith/SpartanYap" target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+              <button class="az-btn az-btn-grey az-btn-sm az-add-cart" type="button">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="az-product" data-search="studysync student collaboration react node express mongodb study sessions projects">
+            <a class="az-product-img az-img-study" href="https://github.com/syedahibahasan/study-sync-frontend" target="_blank" rel="noreferrer">
+              <span aria-hidden="true">📚</span>
+            </a>
+            <div class="az-product-body">
+              <a class="az-product-title" href="https://github.com/syedahibahasan/study-sync-frontend" target="_blank" rel="noreferrer">
+                StudySync — Student Collaboration Platform
+              </a>
+              <div class="az-rating">
+                <span class="az-stars" aria-label="4.5 out of 5 stars">★★★★½</span>
+                <span class="az-rating-count">76</span>
+              </div>
+              <div class="az-price">
+                <span class="az-price-symbol">stack</span>
+                <span class="az-price-whole">React</span>
+                <span class="az-price-frac">+ Node, Express, MongoDB</span>
+              </div>
+              <p class="az-prime"><strong>MERN</strong> stack · Responsive UI</p>
+              <p class="az-stock">In stock — coordinate local study sessions with friends.</p>
+              <div class="az-btn-row">
+                <a class="az-btn az-btn-yellow az-btn-sm" href="https://github.com/syedahibahasan/study-sync-frontend" target="_blank" rel="noreferrer">
+                  Frontend
+                </a>
+                <a class="az-btn az-btn-grey az-btn-sm" href="https://github.com/syedahibahasan/study-sync-backend" target="_blank" rel="noreferrer">
+                  Backend
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="az-product az-product-portfolio" data-search="portfolio site html css javascript responsive design projects">
+            <a class="az-product-img az-img-portfolio" href="#top">
+              <span aria-hidden="true">🌐</span>
+            </a>
+            <div class="az-product-body">
+              <a class="az-product-title" href="#top">This Portfolio — Amazon-themed Single Page</a>
+              <div class="az-rating">
+                <span class="az-stars" aria-label="5 out of 5 stars">★★★★★</span>
+                <span class="az-rating-count">1</span>
+              </div>
+              <div class="az-price">
+                <span class="az-price-symbol">stack</span>
+                <span class="az-price-whole">HTML</span>
+                <span class="az-price-frac">+ CSS, vanilla JS</span>
+              </div>
+              <p class="az-prime"><strong>fast</strong> ship · No frameworks</p>
+              <p class="az-stock">In stock — you’re looking at it right now.</p>
+              <a class="az-btn az-btn-yellow az-btn-sm" href="#top">Back to Top</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills shelf -->
+      <section class="az-shelf az-shelf-grey" id="skills">
+        <div class="az-shelf-head">
+          <h2>Customers also ship with these skills</h2>
+          <a href="#contact">Build with me ›</a>
+        </div>
+
+        <div class="az-skill-grid">
+          <div class="az-skill-card" data-search="languages java python javascript typescript html css skills">
+            <div class="az-skill-icon">☕</div>
+            <h3>Languages</h3>
+            <p>Java · Python · JavaScript · TypeScript · HTML · CSS</p>
+            <span class="az-skill-tag">Best Seller</span>
+          </div>
+          <div class="az-skill-card" data-search="frontend react tailwind flutter skills">
+            <div class="az-skill-icon">⚛️</div>
+            <h3>Frontend</h3>
+            <p>React · Tailwind CSS · Flutter</p>
+            <span class="az-skill-tag">Choice</span>
+          </div>
+          <div class="az-skill-card" data-search="backend flask node express rest api postgresql mongodb skills">
+            <div class="az-skill-icon">🛠️</div>
+            <h3>Backend</h3>
+            <p>Flask · Node.js · Express · REST APIs · PostgreSQL · MongoDB</p>
+            <span class="az-skill-tag">Top Rated</span>
+          </div>
+          <div class="az-skill-card" data-search="cloud devops docker git github bash zsh oracle ssh unix skills">
+            <div class="az-skill-icon">☁️</div>
+            <h3>Cloud &amp; DevOps</h3>
+            <p>Docker · Git · GitHub · Bash · Zsh · Oracle Cloud · SSH · Unix</p>
+            <span class="az-skill-tag">Prime</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience shelf -->
+      <section class="az-shelf" id="experience">
+        <div class="az-shelf-head">
+          <h2>Order history · Experience</h2>
+          <a href="Le Allen Resume 26.docx" download>Track package (Resume) ›</a>
+        </div>
+
+        <div class="az-order-list">
+          <article class="az-order" data-search="student software engineer projects agile collaborative web applications experience">
+            <header class="az-order-head">
+              <div>
+                <strong class="az-order-status">Delivered</strong>
+                <span class="az-order-date">2024 — Present</span>
+              </div>
+              <div class="az-order-id">Order # SSE-2024</div>
+            </header>
+            <div class="az-order-body">
+              <div class="az-order-img">👨‍💻</div>
+              <div>
+                <h3>Student Software Engineer Projects</h3>
+                <p>
+                  Built and shipped multiple collaborative web applications in Agile team settings,
+                  contributing to architecture, backend APIs, frontend UX, and deployment workflows.
+                </p>
+                <a class="az-btn az-btn-grey az-btn-sm" href="#projects">View related projects</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="az-order" data-search="academic foundation algorithms systems distributed networking security computer science education">
+            <header class="az-order-head">
+              <div>
+                <strong class="az-order-status">Delivered</strong>
+                <span class="az-order-date">2022 — 2026</span>
+              </div>
+              <div class="az-order-id">Order # BSSE-2026</div>
+            </header>
+            <div class="az-order-body">
+              <div class="az-order-img">🎓</div>
+              <div>
+                <h3>Academic Foundation — San José State University</h3>
+                <p>
+                  Strengthened computer science fundamentals through coursework in algorithms,
+                  systems, distributed computing, networking, and security. B.S. Software
+                  Engineering · Expected May 2026.
+                </p>
+                <a class="az-btn az-btn-grey az-btn-sm" href="#education">View coursework</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="az-shelf az-shelf-grey" id="education">
+        <div class="az-shelf-head">
+          <h2>Product details · Education</h2>
+        </div>
+        <div class="az-detail-table">
+          <div><strong>School</strong><span>San José State University</span></div>
+          <div><strong>Degree</strong><span>B.S. Software Engineering</span></div>
+          <div><strong>Dates</strong><span>Aug 2022 – May 2026</span></div>
+          <div><strong>Location</strong><span>San Jose, CA</span></div>
+          <div class="az-detail-wide">
+            <strong>Relevant coursework</strong>
+            <span>
+              Data Structures &amp; Algorithms · Operating Systems · Computer Networks ·
+              Distributed Systems · Information Security · Object-Oriented Design · Intro to AI
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Activity (GitHub + LeetCode) -->
+      <section
+        class="az-shelf"
+        id="activity"
+        data-github-username="le-allen"
+        data-leetcode-username="LobotomyCustomer"
+      >
+        <div class="az-shelf-head">
+          <h2>Customers who viewed Allen also viewed his recent coding activity</h2>
+          <a href="https://www.linkedin.com/in/aln-le/" target="_blank" rel="noreferrer">Sponsored (LinkedIn) ›</a>
+        </div>
+
+        <div class="az-activity-grid">
+          <article class="az-activity-card">
+            <header class="az-activity-head">
+              <h3>GitHub · Live</h3>
+              <a href="https://github.com/le-allen" target="_blank" rel="noreferrer">Profile</a>
+            </header>
+            <ul id="github-activity" class="az-activity-list">
+              <li>Loading recent GitHub events…</li>
+            </ul>
+          </article>
+
+          <article class="az-activity-card">
+            <header class="az-activity-head">
+              <h3>LeetCode · Live</h3>
+              <a id="leetcode-profile-link" href="https://leetcode.com/" target="_blank" rel="noreferrer">Profile</a>
+            </header>
+            <div id="leetcode-stats" class="az-leetcode-stats">
+              <p>Loading LeetCode activity…</p>
+            </div>
+            <div class="az-leetcode-ac">
+              <header class="az-activity-head az-activity-head-sub">
+                <h4>Recent AC</h4>
+                <a id="leetcode-submissions-link" href="https://leetcode.com/" target="_blank" rel="noreferrer">All submissions ›</a>
+              </header>
+              <ul id="leetcode-recent-ac" class="az-activity-list az-ac-list">
+                <li>Loading recent accepted submissions…</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="az-shelf az-shelf-grey" id="contact">
+        <div class="az-shelf-head">
+          <h2>Buying options · Contact</h2>
+        </div>
+        <div class="az-buybox">
+          <div class="az-buybox-main">
+            <p class="az-buybox-price">Free · 0-day shipping for recruiters</p>
+            <p class="az-buybox-sub">Open to software engineering internships and new graduate roles.</p>
+            <p class="az-buybox-stock">In stock — usually replies within a business day.</p>
+            <a class="az-btn az-btn-yellow az-btn-wide" href="Le Allen Resume 26.pdf" download>Buy Now (Download Resume PDF)</a>
+            <a class="az-btn az-btn-orange az-btn-wide" href="Le Allen Resume 26.docx" download>Add to Cart (Download Resume DOCX)</a>
+            <a class="az-btn az-btn-grey az-btn-wide" href="mailto:allenle614@gmail.com">Add to List (Email)</a>
+            <p class="az-buybox-meta">
+              Ships from <strong>San Jose, CA</strong> · Sold by <strong>aln.swe</strong>
+            </p>
+          </div>
+          <aside class="az-buybox-side">
+            <h4>Contact Information</h4>
+            <ul>
+              <li><a href="mailto:allenle614@gmail.com">allenle614@gmail.com</a></li>
+              <li><a href="https://github.com/le-allen" target="_blank" rel="noreferrer">github.com/le-allen</a></li>
+              <li><a href="https://linkedin.com/in/aln-le" target="_blank" rel="noreferrer">linkedin.com/in/aln-le</a></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="az-footer">
+      <a href="#top" class="az-back-top">Back to top</a>
+
+      <div class="az-footer-cols">
+        <div>
+          <h4>Get to know me</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#activity">Live Activity</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Work with me</h4>
+          <ul>
+            <li><a href="mailto:allenle614@gmail.com">Email</a></li>
+            <li><a href="Le Allen Resume 26.docx" download>Resume (.docx)</a></li>
+            <li><a href="#contact">Internships</a></li>
+            <li><a href="#contact">New Grad Roles</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Build with me</h4>
+          <ul>
+            <li><a href="#skills">Frontend</a></li>
+            <li><a href="#skills">Backend</a></li>
+            <li><a href="#skills">Cloud &amp; DevOps</a></li>
+            <li><a href="#projects">Open-source Projects</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Find me online</h4>
+          <ul>
+            <li><a href="https://github.com/le-allen" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/aln-le" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li><a href="https://leetcode.com/u/LobotomyCustomer" target="_blank" rel="noreferrer">LeetCode</a></li>
+            <li><a href="tel:+14088096683">Phone</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="az-footer-mid">
+        <a class="az-logo az-logo-footer" href="#top" aria-label="allen.le home">
+          <span class="az-logo-text">aln<span class="az-logo-dot">.swe</span></span>
+          <span class="az-logo-smile" aria-hidden="true"></span>
+        </a>
+        <div class="az-footer-selectors">
+          <button type="button">🌐 English</button>
+          <button type="button">$ USD — US Dollar</button>
+          <button type="button">🇺🇸 United States</button>
+        </div>
+      </div>
+
+      <div class="az-footer-bottom">
+        <p>
+          <span id="year"></span> aln.swe · Inspired by Amazon, built with HTML,
+          CSS, and JavaScript. I hope I don't get sued.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
