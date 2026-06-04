@@ -93,6 +93,30 @@ if (searchForm) {
   });
 }
 
+/* ---------- Skill carousel arrows ---------- */
+const skillTrack = document.getElementById('az-skill-track');
+const skillArrowLeft = document.getElementById('az-skill-arrow-left');
+const skillArrowRight = document.getElementById('az-skill-arrow-right');
+
+if (skillTrack && skillArrowLeft && skillArrowRight) {
+  function scrollSkillTrack(direction) {
+    const step = Math.max(skillTrack.clientWidth * 0.8, 200);
+    skillTrack.scrollBy({ left: direction * step, behavior: 'smooth' });
+  }
+
+  function updateSkillArrows() {
+    const maxScroll = skillTrack.scrollWidth - skillTrack.clientWidth - 1;
+    skillArrowLeft.disabled = skillTrack.scrollLeft <= 0;
+    skillArrowRight.disabled = skillTrack.scrollLeft >= maxScroll;
+  }
+
+  skillArrowLeft.addEventListener('click', () => scrollSkillTrack(-1));
+  skillArrowRight.addEventListener('click', () => scrollSkillTrack(1));
+  skillTrack.addEventListener('scroll', updateSkillArrows, { passive: true });
+  window.addEventListener('resize', updateSkillArrows);
+  updateSkillArrows();
+}
+
 /* ---------- "All" hamburger jumps to first section ---------- */
 const hamburger = document.getElementById('az-hamburger');
 if (hamburger) {

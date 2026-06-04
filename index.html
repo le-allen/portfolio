@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Allen Le Portfolio</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <meta
       name="description"
       content="Portfolio of Allen Le, a software engineer building full-stack web applications and practical developer tools."
@@ -328,12 +329,13 @@
               <p class="az-stock">In stock — coordinate local study sessions with friends.</p>
               <div class="az-btn-row">
                 <a class="az-btn az-btn-yellow az-btn-sm" href="https://github.com/syedahibahasan/study-sync-frontend" target="_blank" rel="noreferrer">
-                  Frontend
+                  GitHub (Frontend)
                 </a>
-                <a class="az-btn az-btn-grey az-btn-sm" href="https://github.com/syedahibahasan/study-sync-backend" target="_blank" rel="noreferrer">
-                  Backend
+                <a class="az-btn az-btn-yellow az-btn-sm" href="https://github.com/syedahibahasan/study-sync-backend" target="_blank" rel="noreferrer">
+                  GitHub (Backend)
                 </a>
               </div>
+              <button class="az-btn az-btn-grey az-btn-sm az-add-cart" type="button">Add to Cart</button>
             </div>
           </article>
 
@@ -367,31 +369,141 @@
           <a href="#contact">Build with me ›</a>
         </div>
 
-        <div class="az-skill-grid">
-          <div class="az-skill-card" data-search="languages java python javascript typescript html css skills">
-            <div class="az-skill-icon">☕</div>
-            <h3>Languages</h3>
-            <p>Java · Python · JavaScript · TypeScript · HTML · CSS</p>
-            <span class="az-skill-tag">Best Seller</span>
+        <div class="az-skill-scroller">
+          <button
+            type="button"
+            class="az-skill-arrow az-skill-arrow-left"
+            id="az-skill-arrow-left"
+            aria-label="Scroll skills left"
+          >‹</button>
+
+          <div class="az-skill-track" id="az-skill-track">
+            <article class="az-skill-item" data-search="languages java skills">
+              <span class="az-skill-cat az-skill-cat-lang">Language</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">Java</div>
+            </article>
+            <article class="az-skill-item" data-search="languages python skills">
+              <span class="az-skill-cat az-skill-cat-lang">Language</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">Python</div>
+            </article>
+            <article class="az-skill-item" data-search="languages javascript js skills">
+              <span class="az-skill-cat az-skill-cat-lang">Language</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">JavaScript</div>
+            </article>
+            <article class="az-skill-item" data-search="languages typescript ts skills">
+              <span class="az-skill-cat az-skill-cat-lang">Language</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">TypeScript</div>
+            </article>
+            <article class="az-skill-item" data-search="languages html html5 skills">
+              <span class="az-skill-cat az-skill-cat-lang">Language</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">HTML5</div>
+            </article>
+            <article class="az-skill-item" data-search="languages css css3 skills">
+              <span class="az-skill-cat az-skill-cat-lang">Language</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">CSS3</div>
+            </article>
+
+            <article class="az-skill-item" data-search="frontend react skills">
+              <span class="az-skill-cat az-skill-cat-frontend">Frontend</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">React</div>
+            </article>
+            <article class="az-skill-item" data-search="frontend tailwind tailwindcss skills">
+              <span class="az-skill-cat az-skill-cat-frontend">Frontend</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">Tailwind</div>
+            </article>
+            <article class="az-skill-item" data-search="frontend flutter dart skills">
+              <span class="az-skill-cat az-skill-cat-frontend">Frontend</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">Flutter</div>
+            </article>
+
+            <article class="az-skill-item" data-search="backend flask python skills">
+              <span class="az-skill-cat az-skill-cat-backend">Backend</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">Flask</div>
+            </article>
+            <article class="az-skill-item" data-search="backend node nodejs skills">
+              <span class="az-skill-cat az-skill-cat-backend">Backend</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">Node.js</div>
+            </article>
+            <article class="az-skill-item" data-search="backend express expressjs skills">
+              <span class="az-skill-cat az-skill-cat-backend">Backend</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">Express</div>
+            </article>
+            <article class="az-skill-item az-skill-item-emoji" data-search="backend rest api skills">
+              <span class="az-skill-cat az-skill-cat-backend">Backend</span>
+              <div class="az-skill-img az-skill-img-emoji">🔗</div>
+              <div class="az-skill-name">REST APIs</div>
+            </article>
+            <article class="az-skill-item" data-search="backend postgresql postgres sql skills">
+              <span class="az-skill-cat az-skill-cat-backend">Backend</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">PostgreSQL</div>
+            </article>
+            <article class="az-skill-item" data-search="backend mongodb mongo nosql skills">
+              <span class="az-skill-cat az-skill-cat-backend">Backend</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">MongoDB</div>
+            </article>
+
+            <article class="az-skill-item" data-search="cloud devops docker container skills">
+              <span class="az-skill-cat az-skill-cat-cloud">DevOps</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">Docker</div>
+            </article>
+            <article class="az-skill-item" data-search="cloud devops git version control skills">
+              <span class="az-skill-cat az-skill-cat-cloud">DevOps</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">Git</div>
+            </article>
+            <article class="az-skill-item" data-search="cloud devops github repos skills">
+              <span class="az-skill-cat az-skill-cat-cloud">DevOps</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">GitHub</div>
+            </article>
+            <article class="az-skill-item" data-search="cloud devops bash shell terminal skills">
+              <span class="az-skill-cat az-skill-cat-cloud">DevOps</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">Bash</div>
+            </article>
+            <article class="az-skill-item az-skill-item-emoji" data-search="cloud devops zsh shell skills">
+              <span class="az-skill-cat az-skill-cat-cloud">DevOps</span>
+              <div class="az-skill-img az-skill-img-emoji">💻</div>
+              <div class="az-skill-name">Zsh</div>
+            </article>
+            <article class="az-skill-item" data-search="cloud oracle skills">
+              <span class="az-skill-cat az-skill-cat-cloud">Cloud</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">Oracle Cloud</div>
+            </article>
+            <article class="az-skill-item az-skill-item-emoji" data-search="cloud devops ssh secure shell skills">
+              <span class="az-skill-cat az-skill-cat-cloud">DevOps</span>
+              <div class="az-skill-img az-skill-img-emoji">🔐</div>
+              <div class="az-skill-name">SSH</div>
+            </article>
+            <article class="az-skill-item" data-search="cloud devops unix linux skills">
+              <span class="az-skill-cat az-skill-cat-cloud">DevOps</span>
+              <div class="az-skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="" loading="lazy"></div>
+              <div class="az-skill-name">Unix / Linux</div>
+            </article>
           </div>
-          <div class="az-skill-card" data-search="frontend react tailwind flutter skills">
-            <div class="az-skill-icon">⚛️</div>
-            <h3>Frontend</h3>
-            <p>React · Tailwind CSS · Flutter</p>
-            <span class="az-skill-tag">Choice</span>
-          </div>
-          <div class="az-skill-card" data-search="backend flask node express rest api postgresql mongodb skills">
-            <div class="az-skill-icon">🛠️</div>
-            <h3>Backend</h3>
-            <p>Flask · Node.js · Express · REST APIs · PostgreSQL · MongoDB</p>
-            <span class="az-skill-tag">Top Rated</span>
-          </div>
-          <div class="az-skill-card" data-search="cloud devops docker git github bash zsh oracle ssh unix skills">
-            <div class="az-skill-icon">☁️</div>
-            <h3>Cloud &amp; DevOps</h3>
-            <p>Docker · Git · GitHub · Bash · Zsh · Oracle Cloud · SSH · Unix</p>
-            <span class="az-skill-tag">Prime</span>
-          </div>
+
+          <button
+            type="button"
+            class="az-skill-arrow az-skill-arrow-right"
+            id="az-skill-arrow-right"
+            aria-label="Scroll skills right"
+          >›</button>
         </div>
       </section>
 

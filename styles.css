@@ -1068,53 +1068,146 @@ button {
 /* =========================================================
    SKILL GRID
    ========================================================= */
-.az-skill-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+/* =========================================================
+   SKILL CAROUSEL (horizontal, Amazon-style sponsored shelf)
+   ========================================================= */
+.az-skill-scroller {
+  position: relative;
 }
 
-.az-skill-card {
+.az-skill-track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 6px 4px 14px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--az-border) transparent;
+}
+
+.az-skill-track::-webkit-scrollbar {
+  height: 8px;
+}
+.az-skill-track::-webkit-scrollbar-thumb {
+  background: var(--az-border);
+  border-radius: 4px;
+}
+.az-skill-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.az-skill-item {
+  flex: 0 0 150px;
+  scroll-snap-align: start;
   background: #fff;
   border: 1px solid var(--az-border);
-  border-radius: 4px;
-  padding: 18px;
+  border-radius: 6px;
+  padding: 14px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   position: relative;
+  text-decoration: none;
+  color: var(--az-text);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.az-skill-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-color: var(--az-orange);
+}
+
+.az-skill-img {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--az-bg-2);
+  border-radius: 50%;
+}
+
+.az-skill-img img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.az-skill-item:hover .az-skill-img img {
+  transform: scale(1.1);
+}
+
+.az-skill-img-emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.az-skill-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--az-text);
   text-align: center;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.az-skill-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-}
-
-.az-skill-icon {
-  font-size: 2.5rem;
-  margin-bottom: 8px;
-}
-
-.az-skill-card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 6px;
-}
-
-.az-skill-card p {
-  color: var(--az-text-2);
-  font-size: 0.88rem;
-}
-
-.az-skill-tag {
+.az-skill-cat {
   position: absolute;
   top: 8px;
   left: 8px;
-  background: var(--az-orange);
-  color: #fff;
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 2px 6px;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.az-skill-cat-lang     { background: #4b8bf4; }
+.az-skill-cat-frontend { background: #0ea5b7; }
+.az-skill-cat-backend  { background: #2e8b57; }
+.az-skill-cat-cloud    { background: var(--az-orange); }
+
+/* Carousel arrows (Amazon-style faded buttons over the track) */
+.az-skill-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--az-border);
+  border-radius: 6px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--az-text);
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.az-skill-arrow:hover {
+  background: #fff;
+}
+
+.az-skill-arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.az-skill-arrow-left  { left: -4px; }
+.az-skill-arrow-right { right: -4px; }
+
+/* (Legacy grouped skill-card styles removed — replaced by horizontal carousel above) */
+.az-skill-tag-unused {
+  display: none;
   border-radius: 2px;
 }
 
@@ -1612,9 +1705,6 @@ button {
   .az-product-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .az-skill-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 900px) {
@@ -1667,8 +1757,11 @@ button {
   .az-product-grid {
     grid-template-columns: 1fr;
   }
-  .az-skill-grid {
-    grid-template-columns: 1fr;
+  .az-skill-item {
+    flex-basis: 130px;
+  }
+  .az-skill-arrow {
+    display: none;
   }
   .az-activity-grid {
     grid-template-columns: 1fr;
